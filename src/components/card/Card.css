@@ -1,0 +1,40 @@
+.card-main-container {
+  /* border: 1px solid black; */
+  width: 30%;
+  margin: 1em;
+  display: block;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px -1px 9px 1px #000000; 
+  box-shadow: 3px -1px 9px 1px #000000;
+}
+
+.card-main-container-info {
+  display: flex;
+}
+
+.card-car-info {
+  width: 60%;
+  margin: 5px;
+  padding: 10px;
+}
+
+.card-car-image {
+  margin: 5px;
+  width: 200px;
+  height: 150px;
+}
+
+.card-background-color-no-maintenance {
+  background-color: rgb(253, 75, 75);
+}
+
+.card-background-color-maintenance{
+  background-color: rgb(118, 243, 118);
+}
+
+.card-car-click-info {
+  width: 100%;
+  text-align: center;
+  margin: 5px;  
+}

@@ -1,0 +1,42 @@
+.main-container {
+  width: 100%;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 3em;
+}
+
+.main-description {
+  width: 100%;
+  display: flex;
+  margin: 2em;
+}
+
+.main-description-child {
+  font-size: 1em;
+  width: 50%;
+  display: flex;
+  text-align: center;
+  margin-left: 2em;
+}
+
+.main-cards-container {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-box-color-no-maintenance {
+  background-color: rgb(253, 75, 75);
+  width: 1em;
+  height: 1em;
+  margin-right: 10px;
+}
+
+.main-box-color-maintenance {
+  background-color: rgb(118, 243, 118);
+  width: 1em;
+  height: 1em;
+  margin-right: 10px;
+}
