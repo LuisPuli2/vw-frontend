@@ -28,14 +28,14 @@ const fillCarData  = (data: any) => {
 
     return (
       <Card 
-        description={ description || '' }
-        make={ make || '' }
-        model={ model || '' }
-        km={ km || -1 }
-        id={ id || -1 }
-        image={ image || '' }
-        estimatedate={ estimatedate || '' }
-        key={ index } 
+        description={description || ''}
+        make={make || ''}
+        model={model || ''}
+        km={km || -1}
+        id={id || -1}
+        image={image || ''}
+        estimatedate={estimatedate || ''}
+        key={index} 
       />
     )
   })
@@ -43,6 +43,7 @@ const fillCarData  = (data: any) => {
 
 const Home = () => {
   const [carsData, setCarsData]: Array<any> = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(()=>{
     async function fetchAPI() {
@@ -53,9 +54,9 @@ const Home = () => {
 
         setCarsData(parsedData)
       } catch (err) {
-        // TODO
         console.log(err)
       }
+      setIsLoading(false)
     }
 
     fetchAPI()
@@ -66,19 +67,28 @@ const Home = () => {
       <div className="main-title">
         LISTA DE AUTOS
       </div>
-      <div className="main-description">
-        <div className="main-description-child">
-          <div className="main-box-color-maintenance" />
-          MANTENIMIENTO ASIGNADO
+      {isLoading ?
+        <div className="main-loading-container">
+          CARGANDO...
+          <div className="main-div-loader" />
         </div>
-        <div className="main-description-child">
-          <div className="main-box-color-no-maintenance" />
-          MANTENIMIENTO SIN ASIGNAR
+        :
+        <div>
+          <div className="main-description">
+            <div className="main-description-child">
+              <div className="main-box-color-maintenance" />
+              MANTENIMIENTO ASIGNADO
+            </div>
+            <div className="main-description-child">
+              <div className="main-box-color-no-maintenance" />
+              MANTENIMIENTO SIN ASIGNAR
+            </div>
+          </div>
+          <div className="main-cards-container">
+            { carsData }
+          </div>
         </div>
-      </div>
-      <div className="main-cards-container">
-        { carsData }
-      </div>
+      }
     </div>
   );
 }
