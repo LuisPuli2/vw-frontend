@@ -65,8 +65,8 @@ const Card = (
               alt={imgPath}
               onError={handleImageError}
               onLoad={handleOnLoad}
-              height='150px'
-              width='200px'
+              height='100px'
+              width='120px'
             /> 
           </div>
         </div>

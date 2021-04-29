@@ -1,5 +1,4 @@
 .card-main-container {
-  /* border: 1px solid black; */
   width: 30%;
   margin: 1em;
   display: block;
@@ -21,8 +20,6 @@
 
 .card-car-image {
   margin: 5px;
-  width: 200px;
-  height: 150px;
   text-align: center;
 }
 
@@ -58,4 +55,16 @@
 
 .hidden-div {
   visibility: hidden;
+}
+
+@media (max-width: 960px) {
+  .card-main-container {
+    width: 45%;
+    margin: 1em;
+    display: block;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px -1px 9px 1px #000000; 
+    box-shadow: 3px -1px 9px 1px #000000;
+  }
 }
